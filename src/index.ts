@@ -526,14 +526,8 @@ class UIController {
             modalOrderItems.appendChild(itemElement);
         });
 
-        // Add total row
-        const totalRow = document.createElement('div');
-        totalRow.className = 'modal-total';
-        totalRow.innerHTML = `
-            <span>Order Total</span>
-            <span class="modal-total-amount">$${order.details.total.toFixed(2)}</span>
-        `;
-        modalOrderItems.appendChild(totalRow);
+        // Update modal total amount
+        modalTotalAmount.textContent = `$${order.details.total.toFixed(2)}`;
 
         // Show modal
         modal.classList.remove('hidden');
