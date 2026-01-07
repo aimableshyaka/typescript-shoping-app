@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts - Shopping Cart</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Desserts Section -->
+        <section class="desserts-section">
+            <h1 class="section-title">Desserts</h1>
+            <div class="desserts-grid" id="dessertsGrid">
+                <!-- Dessert cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <aside class="cart-section">
+            <div class="cart-container">
+                <h2 class="cart-title">Your Cart (<span id="cartCount">0</span>)</h2>
+                <div id="cartContent" class="cart-content">
+                    <div class="cart-empty">
+                        <img src="images/illustration-empty-cart.svg" alt="Empty cart" class="empty-cart-icon">
+                        <p class="empty-cart-text">Your added items will appear here</p>
+                    </div>
+                </div>
+                <div id="cartItems" class="cart-items hidden">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+                <div id="cartSummary" class="cart-summary hidden">
+                    <div class="order-total">
+                        <span>Order Total</span>
+                        <span class="total-amount" id="totalAmount">$0.00</span>
+                    </div>
+                    <div class="carbon-neutral">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-1 15l-5-5 1.41-1.41L9 12.17l7.59-7.59L18 6l-9 9z" fill="#1EA575"/>
+                        </svg>
+                        <span>This is a <strong>carbon-neutral</strong> delivery</span>
+                    </div>
+                    <button class="confirm-btn" id="confirmOrderBtn">Confirm Order</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div id="orderModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="success-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="24" fill="#1EA575"/>
+                        <path d="M20 28.17L14.83 23l-1.41 1.41L20 31l14-14-1.41-1.41L20 28.17z" fill="white"/>
+                    </svg>
+                </div>
+                <h2 class="modal-title">Order Confirmed</h2>
+                <p class="modal-subtitle">We hope you enjoy your food!</p>
+            </div>
+            <div class="modal-body" id="modalOrderItems">
+                <!-- Order items will be dynamically inserted here -->
+            </div>
+            <div class="modal-footer">
+                <div class="modal-total">
+                    <span>Order Total</span>
+                    <span class="modal-total-amount" id="modalTotalAmount">$0.00</span>
+                </div>
+                <button class="start-new-btn" id="startNewOrderBtn">Start New Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script type="module" src="dist/index.js"></script> -->
+     <script type="module" src="index.js"></script>
+
+</body>
+</html>
