@@ -8,7 +8,6 @@ A fully-featured shopping cart application built with TypeScript, implementing b
 - **Functional Programming Approach** with immutable cart operations
 - **Object-Oriented Design** with ShoppingCart and OrderManager classes
 - **Event System** for reactive cart updates
-- **Responsive UI** matching the provided design mockups
 - **Order Management** with full order lifecycle handling
 
 ## 📁 Project Structure
